@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB FLOW</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .navbar {
+            background-color: black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 130px;
+        }
+
+        .navbar ul {
+            overflow: hidden;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            gap: 10px;
+            margin: 0;
+        }
+
+
+        .navbar li {
+            float: left;
+            list-style: none;
+            margin: 10px 3px;
+
+        }
+
+        .navbar li a {
+            text-decoration: none;
+            color: grey;
+        }
+
+        .navbar li a:hover {
+            color: white;
+        }
+
+        .navbar .btnsign {
+            border: 2px solid black;
+            width: 145px;
+            height: 39px;
+            text-align: center;
+            background-color: blue;
+            border-radius: 5px;
+            color: white;
+        }
+
+        .search {
+            float: right;
+        }
+
+        .btn {
+            color: white;
+            background-color: black;
+            border: 2px solid black;
+        }
+
+        .heading {
+            background-color: white;
+            padding: 5px 130px;
+        }
+
+        .heading ul {
+            overflow: auto;
+            display: flex;
+            align-items: center;
+            margin: 0;
+        }
+
+        .heading li {
+            list-style: none;
+            float: left;
+        }
+
+        .heading li a {
+            color: #918787;
+            text-decoration: none;
+            padding: 3px 20px;
+            display: flex;
+        }
+
+        .heading li a:hover {
+            color: black;
+
+        }
+
+        .main-container {
+            background-color: #e4e4e4;
+            padding: 30px 130px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-basis: 100%;
+            justify-content: space-between;
+            gap: 15px;
+
+        }
+
+        .item {
+            box-sizing: border-box;
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+
+        .conthead {
+            background-color: #e4e4e4;
+            height: 20px;
+        }
+
+        .conthead ul {
+            overflow: auto;
+            display: flex;
+            gap: 15px;
+            padding: 10px 130px;
+        }
+
+        .conthead li {
+            display: flex;
+            list-style: none;
+        }
+
+        .conthead li a {
+            text-decoration: none;
+            color: #6a6868;
+        }
+
+        .conthead li a:hover {
+            color: black;
+        }
+
+        .weblogo {
+            font-weight: 900;
+            font-size: 25px;
+            font-style: italic;
+            color: white;
+        }
+
+        .showcase-logo {
+            font-size: large;
+            font-weight: bold;
+            color: black;
+        }
+
+        .card-img {
+            display: flex;
+            flex-direction: column;
+            width: 230px;
+            justify-content: center;
+            align-items: start;
+        }
+
+        .card-smallpic {
+            height: 35px;
+            width: 35px;
+            object-fit: cover;
+            border-radius: 50%;
+
+
+        }
+
+        .card-detail {
+            display: flex;
+            justify-content: left;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .text-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .icon {
+            width: 50px;
+        }
+
+        .list-icon {
+            color: white;
+            display: none;
+        }
+
+        .card-icon {
+            border: 1px solid rgb(185, 185, 185);
+            background-color: white;
+            width: 100%;
+            padding: 3px 5px;
+            display: flex;
+            gap: 12px;
+            color: #adadad;
+            font-size: 13px;
+        }
+
+        .main-nav {
+            display: flex;
+            align-items: center;
+
+        }
+
+        @media (max-width: 600px) {
+
+            .list-icon {
+                display: block;
+                cursor: pointer;
+            }
+
+            .weblogo {
+                display: block !important;
+            }
+            .navbar li a{
+                display: none;
+            }
+            .heading li a{
+                display: none;
+            }
+            .search{
+                display: none;
+            }
+            
+
+            /* .navbar ul {
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 100vh;
+                flex-direction: column;
+                background-color: white;
+                overflow: hidden;
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .arrow-icon {
+                display: block !important;
+            }
+
+            .sec-nav ul{
+                flex-direction: column;
+                position: absolute;
+                background: white;
+                align-items: flex-start;
+                padding: 0;
+                right: 0;
+                top: 100%;
+            }
+            .sec-nav{
+                position: relative;
+            } */
+
+        }
+
+        .arrow-icon {
+            display: none;
+        }
+
+        .sec-nav {
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+
+        <nav class="navbar">
+            <div class="main-nav">
+
+                <span class="weblogo">Webflow</span>>
+                <ul>
+
+                    <li><a href="#">showcase</a> </li>
+                    <li><a href="#">Desginers</a> </li>
+                    <li><a href="#">Learn & Support</a> </li>
+
+                </ul>
+            </div>
+
+            <div class="list-icon">
+                <i class="bi bi-list"></i>
+            </div>
+
+            <div class="search">
+                <button class="btn">Log in</button>
+                <button class="btnsign">Signup for Free</button>
+            </div>
+        </nav>
+        <nav class="heading">
+            <div class="sec-nav">
+                <span class="showcase-logo">Explore The Showcase</span>
+
+                <i class="arrow-icon bi bi-caret-down-fill"></i>
+                <ul>
+                    <li><a href="#">Popular</a> </li>
+                    <li><a href="#">Recent</a> </li>
+                    <li><a href="#">Cloneable</a> </li>
+                </ul>
+            </div>
+
+        </nav>
+        <nav class="conthead">
+            <ul>
+                <li><a href="#">Recent</a> </li>
+                <li><a href="#">Most Liked</a> </li>
+                <li><a href="#">Most Viewed</a> </li>
+
+            </ul>
+    </header>
+    </nav>
+    <div class="main-container">
+
+        <div class="card-img">
+            <img src="Images/1.jpg" alt="" class="item" id="item">
+            <div class="card-icon">
+                <div>
+                    <i class="bi bi-eye-fill"></i>
+                    <span>1234</span>
+                </div>
+                <div>
+                    <i class="bi bi-chat-left-fill"></i>
+                    <span>1122 </span>
+                </div>
+                <div>
+                    <i class="bi bi-heart-fill"></i>
+                    <span>3344</span>
+                </div>
+            </div>
+
+            <div class="card-detail">
+                <img src="Images/4.webp" alt="" class="card-smallpic">
+                <div class="text-container">
+                    <span class="heco">heco</span>
+                    <span>by <a href="https//www.facebook.com">jtheims</a></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-img">
+            <img src="Images/2.jpg" alt="" class="item" id="item">
+            <div class="card-icon">
+                <div>
+                    <i class="bi bi-eye-fill"></i>
+                    <span>1234</span>
+                </div>
+                <div>
+                    <i class="bi bi-chat-left-fill"></i>
+                    <span>1122 </span>
+                </div>
+                <div>
+                    <i class="bi bi-heart-fill"></i>
+                    <span>3344</span>
+                </div>
+            </div>
+            <div class="card-detail">
+                <img src="Images/5.jpg" alt="" class="card-smallpic">
+                <div class="text-container">
+                    <span class="heco">New Concept for IMDB</span>
+                    <span>by <a href="https//www.facebook.com">joaopaulots</a></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-img">
+            <img src="Images/3.webp" alt="" class="item" id="item">
+            <div class="card-icon">
+                <div>
+                    <i class="bi bi-eye-fill"></i>
+                    <span>1234</span>
+                </div>
+                <div>
+                    <i class="bi bi-chat-left-fill"></i>
+                    <span>1122 </span>
+                </div>
+                <div>
+                    <i class="bi bi-heart-fill"></i>
+                    <span>3344</span>
+                </div>
+            </div>
+            <div class="card-detail">
+                <img src="Images/6.jpg" alt="" class="card-smallpic">
+                <div class="text-container">
+                    <span class="heco">Cards-Webflow UI Kit</span>
+                    <span>by <a href="https//www.facebook.com">janlosert</a></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-img">
+            <img src="Images/4.webp" alt="" class="item" id="item">
+            <div class="card-icon">
+                <div>
+                    <i class="bi bi-eye-fill"></i>
+                    <span>1234</span>
+                </div>
+                <div>
+                    <i class="bi bi-chat-left-fill"></i>
+                    <span>1122 </span>
+                </div>
+                <div>
+                    <i class="bi bi-heart-fill"></i>
+                    <span>3344</span>
+                </div>
+            </div>
+            <div class="card-detail">
+                <img src="Images/7.jpg" alt="" class="card-smallpic">
+                <div class="text-container">
+                    <span class="heco">Geospace</span>
+                    <span>by <a href="https//www.facebook.com">joaopaulots</a></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-img">
+            <img src="Images/5.jpg" alt="" class="item" id="item">
+            <div class="card-icon">
+                <div>
+                    <i class="bi bi-eye-fill"></i>
+                    <span>1234</span>
+                </div>
+                <div>
+                    <i class="bi bi-chat-left-fill"></i>
+                    <span>1122 </span>
+                </div>
+                <div>
+                    <i class="bi bi-heart-fill"></i>
+                    <span>3344</span>
+                </div>
+            </div>
+            <div class="card-detail">
+                <img src="Images/8.webp" alt="" class="card-smallpic">
+                <div class="text-container">
+                    <span class="heco">Legowerk</span>
+                    <span>by <a href="https//www.facebook.com">DarioStefanutto</a></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-img">
+            <img src="Images/7.jpg" alt="" class="item" id="item">
+            <div class="card-icon">
+                <div>
+                    <i class="bi bi-eye-fill"></i>
+                    <span>1234</span>
+                </div>
+                <div>
+                    <i class="bi bi-chat-left-fill"></i>
+                    <span>1122 </span>
+                </div>
+                <div>
+                    <i class="bi bi-heart-fill"></i>
+                    <span>3344</span>
+                </div>
+            </div>
+            <div class="card-detail">
+                <img src="Images/1.jpg" alt="" class="card-smallpic">
+                <div class="text-container">
+                    <span class="heco">IeAD Sports Acelerator</span>
+                    <span>by <a href="https//www.facebook.com">MILK</a></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-img">
+            <img src="Images/8.webp" alt="" class="item" id="item">
+            <div class="card-icon">
+                <div>
+                    <i class="bi bi-eye-fill"></i>
+                    <span>1234</span>
+                </div>
+                <div>
+                    <i class="bi bi-chat-left-fill"></i>
+                    <span>1122 </span>
+                </div>
+                <div>
+                    <i class="bi bi-heart-fill"></i>
+                    <span>3344</span>
+                </div>
+            </div>
+            <div class="card-detail">
+                <img src="Images/2.jpg" alt="" class="card-smallpic">
+                <div class="text-container">
+                    <span class="heco">Cards 2.0-Framework/UI...</span>
+                    <span>by <a href="https//www.facebook.com">janlosert</a></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-img">
+            <img src="Images/1.jpg" alt="" class="item" id="item">
+            <div class="card-icon">
+                <div>
+                    <i class="bi bi-eye-fill"></i>
+                    <span>1234</span>
+                </div>
+                <div>
+                    <i class="bi bi-chat-left-fill"></i>
+                    <span>1122 </span>
+                </div>
+                <div>
+                    <i class="bi bi-heart-fill"></i>
+                    <span>3344</span>
+                </div>
+            </div>
+            <div class="card-detail">
+                <img src="Images/3.webp" alt="" class="card-smallpic">
+                <div class="text-container">
+                    <span class="heco">Overton Graphics</span>
+                    <span>by <a href="https//www.facebook.com">OvertonGraphics</a></span>
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>
